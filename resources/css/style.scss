@@ -1,0 +1,45 @@
+$font_title: 'Playfair Display', serif;
+$font_text: 'Roboto Slab', serif;
+
+html{
+	font-family: $font_text;
+	font-size: 16px;
+}
+
+body{
+	padding: 3rem;
+}
+
+h1{
+	font-family: $font_title;
+	font-size: 2rem;
+}
+
+h2{
+	font-family: $font_title;
+	font-size: 1.2rem;
+}
+
+.div_left{
+	width: 20%;
+}
+.navigation{
+	margin-bottom: 2rem;
+}
+.left_subtitle{
+	display: flex;
+	justify-content: space-between;
+	margin-bottom: 1rem;
+}
+.block_title{
+	font-family: $font_title;
+	font-size: 1rem;
+	font-weight: bold;
+	letter-spacing: 0.1rem;
+	color: #888e90;
+}
+.input_form{
+	border: 1.5px solid #888e906b;
+	border-radius: 5px;
+	padding: 0.5rem;
+}

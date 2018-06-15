@@ -1,10 +1,121 @@
 <!DOCTYPE html>
 <html lang=“en”>
-	<head>
-		<title>Storytelling Generator Demo</title>
-		<meta charset=“utf-8”>
-	</head>
-	<body>
-		
-	</body>
+<head>
+	<title>Storytelling Generator Demo</title>
+	<meta charset=“utf-8”>
+	<link rel="stylesheet" type="text/css" href="./resources/css/reset.css">
+	<style>
+	@import url('https://fonts.googleapis.com/css?family=Playfair+Display:400,700|Roboto+Slab:300,400');
+	</style>
+	<link rel="stylesheet" href="./resources/css/all.css" />
+	<link rel="stylesheet" type="text/css" href="./resources/css/style.css">
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+	<script src="./resources/js/kendo.all.min.js"></script>
+	<script src="./resources/js/formtojson.js"></script>
+</head>
+<body>
+	<form action="#" method="get" id="chapter_info" class="k-form">
+		<div class="div_left">
+			<div class="navigation">
+				<h2>My Story ></h2>
+				<h1>Love</h1>
+			</div>
+			<div id="chapter">
+				<div class="left_subtitle">	
+					<div class="block_title">Chapters</div>
+					<div id="_download"></div>				
+				</div>
+				<div class="input_form">
+					<lable class="k-form-field">
+						<span>Title</span>
+						<input type="text" name="chapter_name" id="chapter_name" class="k-textbox" placeholder="Name this chapter">
+					</lable>
+					<lable class="k-form-field">
+						<span>Overview</span>
+						<input type="textarea" name="chapter_description" id="chapter_description" class="k-textarea" placeholder="(optional)">
+					</lable>
+					<button id="_save_chapter" class="k-button k-primary">Save</button>
+				</div>
+			</div>
+		</form>
+		<form action="#" method="get" id="cast_info" class="k-form">
+			<div id="cast">
+				<div class="left_subtitle">
+					<div class="block_title">Characters</div>
+					<button id="add_cast" class="k-button k-primary" class="k-button hide-on-narrow"> + Add</button>
+				</div>
+					<div id="cast_window">
+						<label class="k-form-field">
+							<span>Name</span>
+							<input type="text" name="cast_name" id="cast_name" class="k-textbox" placeholder="Give this character a name">
+						</label>
+						<br>
+						<br>
+						<label class="k-form-field">
+							<span>Notes</span>
+							<input type="text" name="cast_notes" id="cast_notes" class="k-textbox" placeholder="(optional)">
+						</label>
+						<br>
+						<br>
+						<label class="k-dropdown">
+							<span>Amazon Polly Voice</span>
+							<select type="text" name="voice" id="cast_voice">
+								<option>Emma, Female BRITISH</option>
+								<option>Sali, Female US</option>
+							</select>
+						</label>
+						<br>
+						<br>
+						<br>
+							<input type="radio" name="cast_role" id="narrator" value="narrator" class="k-radio">
+							<label class="k-radio-label" for="narrator">Narrator</label>
+							<input type="radio" name="cast_role" id="player" value="player" class="k-radio">
+							<label class="k-radio-label" for="player">Player</label>
+							<input type="radio" name="cast_role" id="neither" value="" class="k-radio" checked="checked">
+							<label class="k-radio-label" for="neither">Neither</label>
+							<br>
+							<br>
+							<br>
+							<button id="_save_cast" class="k-button k-primary">Save</button>
+					</div>
+					<div id="cast_list">
+					</div>
+			</div>
+
+		</div>
+		<div class="div_right">
+
+		</div>
+
+
+
+	</form>
+	<script>
+	$(document).ready(function () {
+		var myWindow = $("#cast_window"),
+		undo = $("#add_cast");
+
+		undo.click(function() {
+			myWindow.data("kendoWindow").open();
+			undo.fadeOut();
+		});
+
+		function onClose() {
+			undo.fadeIn();
+		}
+
+		myWindow.kendoWindow({
+			width: "400px",
+			title: "Add a character",
+			visible: false,
+			actions: [
+			"Minimize",
+			"Close"
+			],
+			close: onClose
+		})
+
+});
+	</script>
+</body>
 </html>
