@@ -14,12 +14,12 @@
 	<script src="./resources/js/formtojson.js"></script>
 </head>
 <body>
-	<form action="#" method="get" id="chapter_info" class="k-form">
 		<div class="div_left">
 			<div class="navigation">
-				<h2>My Story ></h2>
+				<h2>Demo > My Story ></h2>
 				<h1>Love</h1>
 			</div>
+			<form action="#" method="get" id="chapter_info" class="k-form">
 			<div id="chapter">
 				<div class="left_subtitle">	
 					<div class="block_title">Chapters</div>
@@ -80,16 +80,63 @@
 					</div>
 					<div id="cast_list">
 					</div>
+					</form>
 			</div>
 
 		</div>
 		<div class="div_right">
+			<div class="navigation">
+				<h2>Whole Process > </h2>
+				<h1>Demo Video</h1>
+			</div>
+			<div style="margin-bottom:2rem;">
+				<video width="90%" autoplay controls>
+					<source src="./resources/images/demovideo.mp4">
+				</video>
+			</div>
+				<div class="navigation" >
+				<h2>Whole Process > </h2>
+				<h1>Timeline (total 7h)</h1>
+			</div>
+			<div class="process_bar" style="margin-bottom:2rem;">
+				<div style="width:8%; background-color: #ffecc7; overflow: hidden;margin-right:0.5rem;">understand</div>
+				<div style="width:7%; background-color: #ffecc7; overflow: hidden;margin-right:0.5rem;">user flow</div>
+				<div style="width:21%; background-color: #ffecc7; overflow: hidden;margin-right:0.5rem;">wireframe</div>
+				<div style="width:7%; background-color: #ffecc7; overflow: hidden;margin-right:0.5rem;">json structure</div>
+				<div style="width:7%; background-color: #ffecc7; overflow: hidden;margin-right:0.5rem;">json file format</div>
+				<div style="width:14%; background-color: #ffecc7; overflow: hidden;margin-right:0.5rem;">web frmame</div>
+				<div style="width:7%; background-color: #ffecc7; overflow: hidden;margin-right:0.5rem;">html</div>
+				<div style="width:6%; background-color: #ffecc7; overflow: hidden;margin-right:0.5rem;">css</div>
+				<div style="width:25%; background-color: #ffecc7; overflow: hidden;">javascript</div>
+			</div>
+		</div>
 
+		<div class="process">
+			<div class="navigation">
+				<h2>Whole Process > </h2>
+				<h1>Userflow</h1>
+			</div>
+			<div style="margin-bottom:2rem; text-align:center;">
+				<img src="./resources/images/flow.png" style="width:60%; height:auto;">
+			</div>
+
+			<div class="navigation">
+				<h2>Whole Process > </h2>
+				<h1>Json file</h1>
+			</div>
+			<div style="margin-bottom:2rem; text-align:center;">
+				<img src="./resources/images/json.png">
+			</div>
+						<div class="navigation">
+				<h2>Whole Process > </h2>
+				<h1>Wireframe for Web</h1>
+			</div>
+			<div style="margin-bottom:2rem; text-align:center;">
+				<img src="./resources/images/wireframe.png">
+			</div>
 		</div>
 
 
-
-	</form>
 	<script>
 	$(document).ready(function () {
 		var myWindow = $("#cast_window"),

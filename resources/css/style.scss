@@ -22,6 +22,7 @@ h2{
 
 .div_left{
 	width: 20%;
+	float: left;
 }
 .navigation{
 	margin-bottom: 2rem;
@@ -42,4 +43,29 @@ h2{
 	border: 1.5px solid #888e906b;
 	border-radius: 5px;
 	padding: 0.5rem;
+}
+
+.div_right{
+	width: 60%;
+	float: right;
+}
+.process{
+	width: 100%;
+	float:right;
+}
+.process_bar{
+	width: 100%;
+	display: flex;
+	justify-content: flex-start;
+	background-color: #f5f6f6;
+	font-size: 0.9rem;
+	font-weight: 300;
+}
+.process .navigation{
+	float: left;
+	margin-left: 30rem;
+}
+img{
+	width: 80%;
+	height: auto;
 }
